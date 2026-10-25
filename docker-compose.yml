@@ -16,24 +16,6 @@ services:
       timeout: 5s
       retries: 10
 
-  adminer:
-    image: adminer:4
-    container_name: nyc_adminer
-    ports:
-      - "8080:8080"
-    depends_on:
-      - postgres
-
-  metabase:
-    image: metabase/metabase:latest
-    container_name: nyc_metabase
-    ports:
-      - "3000:3000"
-    environment:
-      MB_DB_FILE: /metabase.db
-    volumes:
-      - mbdata:/metabase
-
   api:
     build:
       context: .
@@ -47,4 +29,3 @@ services:
 
 volumes:
   pgdata:
-  mbdata:
