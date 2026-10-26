@@ -24,10 +24,12 @@ CREATE Table if NOT EXISTS raw_trips(
 
 CREATE Table IF NOT EXISTS clean_trips(
     vendor_id INT,
-    tpep_pickup_datetime TIMESTAMP,
-    tpep_dropoff_datetime TIMESTAMP,
+    pickup_ts TIMESTAMP,
+    dropoff_ts TIMESTAMP,
     trip_distance FLOAT,
     fare_amount FLOAT,
     tip_amount FLOAT,
-    total_amount FLOAT
+    total_amount FLOAT,
+    pu_location_id INT,
+    do_location_id INT
 )
