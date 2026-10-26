@@ -1,11 +1,11 @@
-CREATE Table if NOT EXISTS raw_trips(
+CREATE Table if NOT EXISTS trips_clean(
     vendor_id INT,  
     tpep_pickup_datetime TIMESTAMP,
     tpep_dropoff_datetime TIMESTAMP,
     passenger_count INT,
     trip_distance FLOAT,
     ratecode_id INT,
-    store_and_fwd_flag STRING,
+    store_and_fwd_flag TEXT,
     pu_location_id INT,
     do_location_id INT,
     payment_type INT,
@@ -16,13 +16,13 @@ CREATE Table if NOT EXISTS raw_trips(
     tolls_amount FLOAT,
     improvement_surcharge FLOAT,
     total_amount FLOAT,
-    improvement_surcharge FLOAT,
+    congestion_surcharge FLOAT,
     airport_fee FLOAT,
     cbd_congestion_fee FLOAT
 );
 
 
-CREATE Table IF NOT EXISTS clean_trips(
+CREATE Table IF NOT EXISTS trips_clean(
     vendor_id INT,
     pickup_ts TIMESTAMP,
     dropoff_ts TIMESTAMP,
@@ -32,4 +32,4 @@ CREATE Table IF NOT EXISTS clean_trips(
     total_amount FLOAT,
     pu_location_id INT,
     do_location_id INT
-)
+);
