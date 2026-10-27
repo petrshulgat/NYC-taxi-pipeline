@@ -31,5 +31,6 @@ CREATE Table IF NOT EXISTS trips_clean(
     tip_amount FLOAT,
     total_amount FLOAT,
     pu_location_id INT,
-    do_location_id INT
+    do_location_id INT,
+    duration_min INT
 );
