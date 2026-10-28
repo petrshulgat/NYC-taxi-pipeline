@@ -8,7 +8,7 @@ def safe_size(num_cols):
     return max(1000, int(MAX_PARAMSIZE / max(1, num_cols)))   #number of rows
 
 
-RAW_SCHEMA = {
+RAW_SCHEMA = [
     "vendor_id",
     "tpep_pickup_datetime" ,
     "tpep_dropoff_datetime",
@@ -29,13 +29,14 @@ RAW_SCHEMA = {
     "congestion_surcharge",
     "airport_fee" ,
     "cbd_congestion_fee" 
-}
+]
 
 RENAME_MAP = {
     "VendorID" : "vendor_id",
     "RatecodeID" : "ratecode_id",
     "PULocationID" : "pu_location_id",
-    "DOLocationID" : "do_location_id"
+    "DOLocationID" : "do_location_id",
+    "Airport_fee" : "airport_fee"
 }
 
 

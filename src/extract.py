@@ -3,7 +3,7 @@ import requests
 from . import settings 
 
 def download_raw():
-    os.mkdir("data/raw", exist_ok=True)
+    os.makedirs("data/raw", exist_ok=True)
     url = settings.PARQUET_URL
     out_path = settings.LOCAL_RAW
     print("Downloaded ")

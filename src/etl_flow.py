@@ -1,6 +1,6 @@
 from .extract import download_raw
-from transform import clean
-from load import load_clean, load_raw
+from .transform import clean
+from .load import load_clean, load_raw
 from .db import execute_sql
 
 def check_schema():

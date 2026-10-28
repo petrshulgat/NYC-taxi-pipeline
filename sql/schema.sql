@@ -1,4 +1,4 @@
-CREATE Table if NOT EXISTS trips_clean(
+CREATE Table if NOT EXISTS trips_raw(
     vendor_id INT,  
     tpep_pickup_datetime TIMESTAMP,
     tpep_dropoff_datetime TIMESTAMP,
