@@ -84,7 +84,7 @@ docker compose up -d
 
 **4. Create the tables**
 ```powershell
-Get-Content sql\schema.sql | docker exec -i nyc_pg psql -U nyc_user -d nyc_taxi
+docker exec -i nyc_pg psql -U nyc_user -d nyc_taxi < sql\schema.sql
 ```
 Check they exist:
 ```powershell
